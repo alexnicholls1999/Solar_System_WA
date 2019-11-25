@@ -1,7 +1,9 @@
-.atmosphere {
-  background: blue;
+.container {
   height: 100vh;
-  width: 100%;
+  position: relative;
 }
 
+.container #rocket {
+  position: absolute;
+}
 /*# sourceMappingURL=main.css.map */
