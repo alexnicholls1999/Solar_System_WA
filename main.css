@@ -1,9 +1,17 @@
 .container {
   height: 100vh;
-  position: relative;
-}
+  position: relative; }
+  .container #rocket {
+    position: absolute;
+    margin-left: 250px;
+    height: 250px;
+    width: 216.2px;
+    background: url("Rocket.gif");
+    animation: thrust 1.5s steps(2) 2; }
+@keyframes thrust {
+  from {
+    background-position: 250 0; }
+  to {
+    background-position: 1081px 0; } }
 
-.container #rocket {
-  position: absolute;
-}
 /*# sourceMappingURL=main.css.map */
