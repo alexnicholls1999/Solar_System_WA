@@ -4,15 +4,32 @@
 }
 
 .earth_atmosphere{
-    height: 60vh;
+    height: 70vh;
     background: linear-gradient(180deg, #007ED1, #4DD4FF);
 }
 
 .mars_atmosphere{
-    height: 60vh;
+    height: 70vh;
     background: linear-gradient(180deg, #D56F00, #F4B822);
 }
 
+.mars_orbit{ 
+    background-image: url('space_bg.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+.facts li{
+    color: white;
+    font-size: 20px;
+    width: 80%;
+}
+
+.mars_lg {
+    height: 500px;
+    margin-left: 50%;
+    margin-top: -25%;
+}
 
 #rocket {
     position: absolute;
@@ -20,7 +37,9 @@
     // margin-top: 350px;
     height: 265px;
     width: 216px;
-    background: url('Rocket.gif') 0px 0px;    
+    background: url('Rocket.png') 0px 0px; 
+    z-index: 2;
+    mix-blend-mode: white;   
 }   
 
 #rocket .launchAnimation{
@@ -42,7 +61,7 @@ button {
     width: 25%;
     color: white;
     padding: 5px;
-    margin-top: 10%;
+    margin-top: 10px;
     font-size: 20px;
 }
 
@@ -65,19 +84,19 @@ button {
     position: relative;
     height: 230px;
     width: 230px;
-    background: url('Spritesheet.gif') 0px 0px;   
+    background: url('Spritesheet.png') 0px 0px;   
     // animation: planet_rotation 1s steps(5) infinite;
 }
 
 #mars:hover {
-    animation: planet_rotation 1s steps(5) infinite;
+    animation: planet_rotation 1.25s steps(5) infinite;
 }
 
 #earth {
     position: relative;
     height: 250px;
     width: 230px;
-    background: url('Earth_Spritesheet.gif') 0px 0px;
+    background: url('Earth_Spritesheet.jpeg') 0px 0px;
 }
 
 #earth:hover {

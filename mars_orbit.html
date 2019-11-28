@@ -16,29 +16,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     <script src="launch.js"></script>
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
-
-    <script>
-    
-        function check() {
-            let oldURL = document.referrer;
-            let solarURL = document.location.href;
-
-            if (oldURL != solarURL){
-                console.log('stop');
-            }else{
-                console.log('run');
-            }
-        }
-    
-    </script>
 </head>
 <body>
 
-    <header class="earth_atmosphere">
-        <div id="rocket"></div>
+    <header class="mars_orbit">
         <div class="container">
             <nav class="navbar">
                 <span class="navbar-brand mb-0 h1">Space Kids Learning</span>
@@ -50,18 +36,23 @@
             </div>
             <div class="row">
                 <div class="title col-md-6 col-lg-8">
-                    <div id="launchpad">
-                        <img src="Images\Earth\launchpad.png" alt="" srcset="">
-                    </div>
-                    <h1 class="h1">Solar System</h1>
-                    <button onclick="launch()" class="button ml-auto">Launch</button>
+                    <h1 class="h1">Mars</h1>
+                    <ul class="facts">
+                        <li >96% CO2</li>
+                        <li >It has a thin atmosphere</li>
+                        <li >No magnetic field</li>
+                        <li >Its a red planet due to a mineral called iron oxide</li>
+                        <li >Could still relatively be an active planet</li>
+                    </ul>
+                    <a href="mars_surface.html"><button class="button ml-auto">Visit</button></a>
+                    <a href="index.html"><button class="button ml-auto">Solar System</button></a>
                 </div>
-                <div class="col-md-6 col-lg-4"></div>
+                <div class="col-md-6">
+                </div>
             </div>
+            <img class="mars_lg"src="Mars.png" alt="" srcset="">
         </div>
     </header>
-
-    <div class="land earth_land"></div>
 
     <!-- <div id="rocket" class="launchAnimation" style="margin-top: -350px;"><div>
         <h1>Solar System</h1>
