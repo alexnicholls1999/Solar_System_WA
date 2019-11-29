@@ -11,6 +11,35 @@
     z-index: -1;
 }
 
+.loading {
+    background-image: url('Loading_Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;   
+    height: 100vh;
+    // width: 1475px;
+    // animation: loading 1.5s steps(5) infinite;
+}
+
+.rocket_loading {
+    position: absolute;
+    margin: 25% 45%;
+    transform: rotate(90deg);
+    // margin-top: 350px;
+    height: 265px;
+    width: 216px;
+    background: url('Rocket.png') 0px 0px; 
+    z-index: 2;
+    mix-blend-mode: white; 
+    animation: thrust 1.5s steps(2) infinite;
+}
+
+@keyframes loading{
+    from{
+        background-position: 1475px 0;
+    }to{
+        background-position: 2875px 0;
+    }
+}
 .earth_atmosphere{
     height: 70vh;
     background: linear-gradient(180deg, #007ED1, #4DD4FF);
@@ -46,21 +75,21 @@
     // margin-top: 350px;
     height: 265px;
     width: 216px;
-    background: url('Rocket.png') 0px 0px; 
+    background-image: url('Rocket.png'); 
     z-index: 2;
     mix-blend-mode: white;   
 }   
 
-#rocket .launchAnimation{
-    animation: thrust 1.5s steps(2) infinite;
-    
+
+.launchAnimation{
+    animation: thrust 1s steps(2) infinite;
 }
 
 @keyframes thrust{
     from{
-        background-position: 216px 0;
+        background-position: 396px 0;
     }to{
-        background-position: 1081px 0;
+        background-position: 0px 0;
     }
 }
 
@@ -235,3 +264,33 @@ button {
         background-position: 0px 0;
     }
 }
+
+@media only screen and (max-width: 1300px){
+    #sun img{
+        display: none;
+    }
+    #mercury img{
+        display: none;
+    }
+    #venus img{
+        display: none;
+    }
+    #earth img{
+        display: none;
+    }
+    #mars img{
+        display: none;
+    }
+    #jupiter img{
+        display: none;
+    }
+    #saturn img{
+        display: none;
+    }
+    #uranus img{
+        display: none;
+    }
+    #neptune img{
+        display: none;
+    }
+}   

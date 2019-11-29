@@ -1,4 +1,6 @@
 window.onload = function(){
+
+    document.getElementById("rocket").classList.add('launchAnimation');
     const path = {
         curviness: 0,
         values: [{x: 0, y:0}, {x: 0, y: 450}]
