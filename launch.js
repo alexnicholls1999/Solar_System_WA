@@ -1,8 +1,7 @@
-let launch_sound = new Audio('Rocket-Thrust.mp3');
-
 window.onload = function(){
 
     document.getElementById("rocket").classList.add('launchAnimation');
+
     const path = {
         curviness: 0,
         values: [{x: 0, y:0}, {x: 0, y: 850}]
@@ -21,7 +20,6 @@ window.onload = function(){
            )
 
 }
-
 
 function stopSpriteSheet(){
     document.getElementById('rocket').classList.remove("launchAnimation");
@@ -50,8 +48,6 @@ function launch(){
         curviness: 0, 
         values: [{x: 0, y:0}, {x: 0, y: -1000}]
     }
-    
-    launch_sound.play();
 
     document.getElementById('rocket').classList.add("launchAnimation");
     // document.getElementById('rocket').style.backgroundPosition = "-250px  0px";
