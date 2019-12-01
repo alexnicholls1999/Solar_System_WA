@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+body{
+    font-family: 'Orbitron', sans-serif;
+}
+
+a {
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;
+    cursor: default;
+}
 
 .h1 {
+    font-family: 'Orbitron', sans-serif;
     color: white;
 }
 
@@ -11,14 +27,26 @@
     z-index: -1;
 }
 
-.loading {
+#loading {
     background-image: url('Loading_Background.png');
     background-repeat: no-repeat;
     background-size: cover;   
     height: 100vh;
-    // width: 1475px;
-    // animation: loading 1.5s steps(5) infinite;
+    width: 11500px;
+    // animation: loading 1.5s steps(4);
 }
+
+#title {
+    opacity: 0;
+}
+
+// @keyframes loading{
+//     from{
+//         background-position: 0px 0; 
+//     }to{
+//         background-position: 11500px 0;
+//     }
+// }
 
 .rocket_loading {
     position: absolute;
@@ -30,10 +58,10 @@
     background: url('Rocket_Loading.png') 0px 0px; 
     z-index: 2;
     mix-blend-mode: white; 
-    animation: loading 1.5s steps(6) infinite;
+    animation: spaceflight 1.5s steps(6) infinite;
 }
 
-@keyframes loading{
+@keyframes spaceflight{
     from{
         background-position: 0px 0;
     }to{
@@ -50,7 +78,7 @@
     background: linear-gradient(180deg, #D56F00, #F4B822);
 }
 
-.mars_orbit{ 
+.orbit{ 
     background-image: url('space_bg.png');
     height: 100vh;
     background-size: contain;
@@ -60,7 +88,11 @@
 .facts li{
     color: white;
     font-size: 20px;
-    width: 80%;
+    width: 75%;
+}
+
+#mars_facts{
+    opacity: 0;
 }
 
 .mars_lg {
@@ -120,15 +152,21 @@ button {
 
 #mars {
     position: absolute;
-    height: 230px;
-    width: 230px;
+    height: 190px;
+    width: 190px;
     background: url('Spritesheet.png') 0px 0px;   
     // animation: planet_rotation 1s steps(5) infinite;
     margin: 15% 60%;
+
+    p {
+        font-size: 20px;
+        margin: -17% 75%;
+    }
+
 }
 
 #mars:hover {
-    animation: planet_rotation 1.25s steps(5) infinite;
+    animation: mars_planet_rotation 1.25s steps(5) infinite;
 }
 
 #earth {
@@ -138,6 +176,10 @@ button {
     background: url('Earth_Spritesheet.png') 0px 0px;
     margin-top: 27%;
     margin-left: 35%;
+
+    p {
+        font-size: 20px;
+    }
 }
 
 #earth:hover {
@@ -152,7 +194,7 @@ button {
         position: absolute;
         padding: -15%;
         font-size: 20px;
-        margin: -15% 100%;
+        margin: -100% 100%;
     }
 
     img {
@@ -166,13 +208,30 @@ button {
 
 #mercury {
     position: absolute;
-    margin-top: 25%;
+    margin-top: 27%;
     margin-left: 56.5%;
     height: 40px;
     width: 40px;  
     background-image: url('Images/Mercury.png');
     background-size: contain;   
     background-repeat: no-repeat;
+    opacity: 0.4;
+
+    p {
+        position: absolute;
+        padding: -15%;
+        font-size: 20px;
+        margin: -20% 116%;
+    }
+}
+
+#venus {
+    position: absolute;
+    margin: 15% 30%;
+    height: 150px;
+    width: 150px;
+    background: url('venus_spritesheet.png') 0px 0px;
+    // background-size: cover;
 
     p {
         position: absolute;
@@ -182,21 +241,8 @@ button {
     }
 }
 
-#venus {
-    position: absolute;
-    margin: 20% 39%;
-    height: 75px;
-    width: 75px; 
-    background-image: url('Images/Venus.png');
-    background-size: contain;   
-    background-repeat: no-repeat;
-
-    p {
-        position: absolute;
-        padding: -15%;
-        font-size: 20px;
-        margin: -15% 100%;
-    }
+#venus:hover {
+    animation: venus_planet_rotation 3s steps(4) infinite; 
 }
 
 #jupiter {
@@ -208,6 +254,12 @@ button {
     background-image: url('Images/Jupiter.png');
     background-size: contain;   
     background-repeat: no-repeat;
+
+    p {
+        font-size: 20px;
+        margin-top: 25%;
+        margin-left: -25%;
+    }
 }
 
 #saturn {
@@ -219,6 +271,12 @@ button {
     background-image: url('Images/Saturn.png');
     background-size: contain;   
     background-repeat: no-repeat;
+    opacity: 0.4;
+
+    p {
+        font-size: 20px;
+        margin: 35% 85%;
+    }
 }
 
 #neptune {
@@ -230,6 +288,12 @@ button {
     background-image: url('Images/Neptune.png');
     background-size: contain;
     background-repeat: no-repeat;
+    opacity: 0.4;
+
+    p {
+        font-size: 20px;
+        margin: 0% 100%;
+    }
 }
 
 #uranus {
@@ -241,6 +305,14 @@ button {
     background-image: url('Images/Uranus.png');
     background-size: contain;   
     background-repeat: no-repeat;
+    opacity: 0.4;
+
+    p {
+        font-size: 20px;
+        margin-top: 0%;
+        margin-left: -25%;
+    }
+
 }
 
 #launchpad {
@@ -249,17 +321,25 @@ button {
     margin-left: 50%;
 }
 
-@keyframes planet_rotation{
+@keyframes mars_planet_rotation{
     from{
         background-position: 0px 0;
     }to{
-        background-position: 1150px 0;
+        background-position: 950px 0;
     }
 }
 
 @keyframes earth_planet_rotation{
     from{
         background-position: 1250px 0;
+    }to{
+        background-position: 0px 0;
+    }
+}
+
+@keyframes venus_planet_rotation{
+    from{
+        background-position: 600px 0;
     }to{
         background-position: 0px 0;
     }
