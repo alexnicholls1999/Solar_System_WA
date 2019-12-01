@@ -30,7 +30,7 @@ function CheckDestination(){
 
     if (star == "sun"){
         setTimeout(function(){
-            window.location.href = 'sun.html';
+            window.location.href = 'sun_orbit.html';
         }, 3000);
 
     }else{
@@ -40,7 +40,7 @@ function CheckDestination(){
             }, 4000);
         } else if (planet == "venus"){
                 setTimeout(function(){
-                    window.location.href = '#';
+                    window.location.href = 'venus_orbit.html';
                 }, 4000);  
         }else if (planet == "mars"){
             setTimeout(function(){
@@ -48,7 +48,7 @@ function CheckDestination(){
             }, 5000);            
         }else if (planet == "jupiter"){
             setTimeout(function(){
-                window.location.href = '#';
+                window.location.href = 'jupiter_orbit.html';
             }, 5000);            
         }
     }
