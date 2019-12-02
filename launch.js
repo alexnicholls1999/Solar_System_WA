@@ -29,7 +29,7 @@ function appear(){
     document.getElementById("rocket").classList.add('launchAnimation');
     document.getElementById("rocket").style.Bottom = "0";
     document.getElementById("rocket").style.transform = "rotate(56deg)";
-    document.getElementById("rocket").style.marginLeft = "-25%";      
+    document.getElementById("rocket").style.marginLeft = "-10px";      
 
 
 
