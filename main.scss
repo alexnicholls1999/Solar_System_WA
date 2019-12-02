@@ -2,6 +2,15 @@
 
 body{
     font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+}
+
+.space{
+    background-color: black;
+}
+
+#planet{
+    color: white;
 }
 
 a {
@@ -48,9 +57,10 @@ a:hover{
 //     }
 // }
 
-.rocket_loading {
+#rocket_loading {
     position: absolute;
-    margin: 25% 45%;
+    margin-top: 25%; 
+    margin-left: 45%;
     transform: rotate(90deg);
     // margin-top: 350px;
     height: 294px;
@@ -59,6 +69,29 @@ a:hover{
     z-index: 2;
     mix-blend-mode: white; 
     animation: spaceflight 1.5s steps(6) infinite;
+}
+
+.movedown{
+    margin-top: 50px;
+    transition-duration:  2s;
+    transition-timing-function: linear; 
+}
+
+.moveup{
+    margin-top: -50px;
+    transition-duration:  2s;
+    transition-timing-function: linear; 
+}
+
+.moveleft{
+    margin-left: 50px;
+    transition-duration:  2s;
+    transition-timing-function: linear; 
+}
+.moveright{
+    margin-left: -50px;
+    transition-duration:  2s;
+    transition-timing-function: linear; 
 }
 
 @keyframes spaceflight{

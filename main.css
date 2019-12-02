@@ -1,78 +1,151 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron&display=swap");
 body {
-  font-family: 'Orbitron', sans-serif; }
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+.space {
+  background-color: black;
+}
+
+#planet {
+  color: white;
+}
 
 a {
-  color: white; }
+  color: white;
+}
 
 a:hover {
   text-decoration: none;
   color: white;
-  cursor: default; }
+  cursor: default;
+}
 
 .h1 {
   font-family: 'Orbitron', sans-serif;
-  color: white; }
+  color: white;
+}
 
 .solar_system {
   background-image: url("space_bg.png");
   background-size: contain;
   background-position-y: top;
   height: 100vh;
-  z-index: -1; }
+  z-index: -1;
+}
 
 #loading {
   background-image: url("Loading_Background.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  width: 11500px; }
+  width: 11500px;
+}
 
 #title {
-  opacity: 0; }
+  opacity: 0;
+}
 
-.rocket_loading {
+#rocket_loading {
   position: absolute;
-  margin: 25% 45%;
-  transform: rotate(90deg);
+  margin-top: 25%;
+  margin-left: 45%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   height: 294px;
   width: 140px;
   background: url("Rocket_Loading.png") 0px 0px;
   z-index: 2;
   mix-blend-mode: white;
-  animation: spaceflight 1.5s steps(6) infinite; }
+  -webkit-animation: spaceflight 1.5s steps(6) infinite;
+          animation: spaceflight 1.5s steps(6) infinite;
+}
+
+.movedown {
+  margin-top: 50px;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.moveup {
+  margin-top: -50px;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.moveleft {
+  margin-left: 50px;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.moveright {
+  margin-left: -50px;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+@-webkit-keyframes spaceflight {
+  from {
+    background-position: 0px 0;
+  }
+  to {
+    background-position: 852px 0;
+  }
+}
 
 @keyframes spaceflight {
   from {
-    background-position: 0px 0; }
+    background-position: 0px 0;
+  }
   to {
-    background-position: 852px 0; } }
+    background-position: 852px 0;
+  }
+}
+
 .earth_atmosphere {
   height: 70vh;
-  background: linear-gradient(180deg, #007ED1, #4DD4FF); }
+  background: -webkit-gradient(linear, left top, left bottom, from(#007ED1), to(#4DD4FF));
+  background: linear-gradient(180deg, #007ED1, #4DD4FF);
+}
 
 .mars_atmosphere {
   height: 70vh;
-  background: linear-gradient(180deg, #D56F00, #F4B822); }
+  background: -webkit-gradient(linear, left top, left bottom, from(#D56F00), to(#F4B822));
+  background: linear-gradient(180deg, #D56F00, #F4B822);
+}
 
 .orbit {
   background-image: url("space_bg.png");
   height: 100vh;
   background-size: contain;
-  background-position: bottom; }
+  background-position: bottom;
+}
 
 .facts li {
   color: white;
   font-size: 20px;
-  width: 75%; }
+  width: 75%;
+}
 
 #mars_facts {
-  opacity: 0; }
+  opacity: 0;
+}
 
 .mars_lg {
   height: 500px;
   margin-left: 50%;
-  margin-top: -25%; }
+  margin-top: -25%;
+}
 
 #rocket {
   position: absolute;
@@ -81,16 +154,32 @@ a:hover {
   width: 140px;
   background-image: url("Rocket.png");
   z-index: 2;
-  mix-blend-mode: white; }
+  mix-blend-mode: white;
+}
 
 .launchAnimation {
-  animation: thrust 1s steps(7) infinite; }
+  -webkit-animation: thrust 1s steps(7) infinite;
+          animation: thrust 1s steps(7) infinite;
+}
+
+@-webkit-keyframes thrust {
+  from {
+    background-position: 0px 0;
+  }
+  to {
+    background-position: 994px 0;
+  }
+}
 
 @keyframes thrust {
   from {
-    background-position: 0px 0; }
+    background-position: 0px 0;
+  }
   to {
-    background-position: 994px 0; } }
+    background-position: 994px 0;
+  }
+}
+
 button {
   background: none;
   border: 3px solid white;
@@ -98,32 +187,41 @@ button {
   color: white;
   padding: 5px;
   margin-top: 10px;
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .land {
   position: relative;
   width: 100%;
   height: 100px;
-  z-index: -1; }
+  z-index: -1;
+}
 
 .earth_land {
-  background: #6ED800; }
+  background: #6ED800;
+}
 
 .mars_land {
-  background: #DB8400; }
+  background: #DB8400;
+}
 
 #mars {
   position: absolute;
   height: 190px;
   width: 190px;
   background: url("Spritesheet.png") 0px 0px;
-  margin: 15% 60%; }
-  #mars p {
-    font-size: 20px;
-    margin: -17% 75%; }
+  margin: 15% 60%;
+}
+
+#mars p {
+  font-size: 20px;
+  margin: -17% 75%;
+}
 
 #mars:hover {
-  animation: mars_planet_rotation 1.25s steps(5) infinite; }
+  -webkit-animation: mars_planet_rotation 1.25s steps(5) infinite;
+          animation: mars_planet_rotation 1.25s steps(5) infinite;
+}
 
 #earth {
   position: absolute;
@@ -131,27 +229,38 @@ button {
   width: 230px;
   background: url("Earth_Spritesheet.png") 0px 0px;
   margin-top: 27%;
-  margin-left: 35%; }
-  #earth p {
-    font-size: 20px; }
+  margin-left: 35%;
+}
+
+#earth p {
+  font-size: 20px;
+}
 
 #earth:hover {
-  animation: earth_planet_rotation 1.25s steps(5) infinite; }
+  -webkit-animation: earth_planet_rotation 1.25s steps(5) infinite;
+          animation: earth_planet_rotation 1.25s steps(5) infinite;
+}
 
 #sun {
   position: absolute;
-  margin: 20% 45%; }
-  #sun p {
-    position: absolute;
-    padding: -15%;
-    font-size: 20px;
-    margin: -100% 100%; }
-  #sun img {
-    border-radius: 100%;
-    box-shadow: 0px 0px 20px 20px #B14000;
-    height: 200px;
-    width: 200px;
-    margin: 0 auto; }
+  margin: 20% 45%;
+}
+
+#sun p {
+  position: absolute;
+  padding: -15%;
+  font-size: 20px;
+  margin: -100% 100%;
+}
+
+#sun img {
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 20px 20px #B14000;
+          box-shadow: 0px 0px 20px 20px #B14000;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
 
 #mercury {
   position: absolute;
@@ -162,27 +271,35 @@ button {
   background-image: url("Images/Mercury.png");
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.4; }
-  #mercury p {
-    position: absolute;
-    padding: -15%;
-    font-size: 20px;
-    margin: -20% 116%; }
+  opacity: 0.4;
+}
+
+#mercury p {
+  position: absolute;
+  padding: -15%;
+  font-size: 20px;
+  margin: -20% 116%;
+}
 
 #venus {
   position: absolute;
   margin: 15% 30%;
   height: 150px;
   width: 150px;
-  background: url("venus_spritesheet.png") 0px 0px; }
-  #venus p {
-    position: absolute;
-    padding: -15%;
-    font-size: 20px;
-    margin: -15% 100%; }
+  background: url("venus_spritesheet.png") 0px 0px;
+}
+
+#venus p {
+  position: absolute;
+  padding: -15%;
+  font-size: 20px;
+  margin: -15% 100%;
+}
 
 #venus:hover {
-  animation: venus_planet_rotation 3s steps(4) infinite; }
+  -webkit-animation: venus_planet_rotation 3s steps(4) infinite;
+          animation: venus_planet_rotation 3s steps(4) infinite;
+}
 
 #jupiter {
   position: absolute;
@@ -192,11 +309,14 @@ button {
   height: 500px;
   background-image: url("Images/Jupiter.png");
   background-size: contain;
-  background-repeat: no-repeat; }
-  #jupiter p {
-    font-size: 20px;
-    margin-top: 25%;
-    margin-left: -25%; }
+  background-repeat: no-repeat;
+}
+
+#jupiter p {
+  font-size: 20px;
+  margin-top: 25%;
+  margin-left: -25%;
+}
 
 #saturn {
   position: absolute;
@@ -207,10 +327,13 @@ button {
   background-image: url("Images/Saturn.png");
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.4; }
-  #saturn p {
-    font-size: 20px;
-    margin: 35% 85%; }
+  opacity: 0.4;
+}
+
+#saturn p {
+  font-size: 20px;
+  margin: 35% 85%;
+}
 
 #neptune {
   position: absolute;
@@ -221,10 +344,13 @@ button {
   background-image: url("Images/Neptune.png");
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.4; }
-  #neptune p {
-    font-size: 20px;
-    margin: 0% 100%; }
+  opacity: 0.4;
+}
+
+#neptune p {
+  font-size: 20px;
+  margin: 0% 100%;
+}
 
 #uranus {
   position: absolute;
@@ -235,58 +361,102 @@ button {
   background-image: url("Images/Uranus.png");
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.4; }
-  #uranus p {
-    font-size: 20px;
-    margin-top: 0%;
-    margin-left: -25%; }
+  opacity: 0.4;
+}
+
+#uranus p {
+  font-size: 20px;
+  margin-top: 0%;
+  margin-left: -25%;
+}
 
 #launchpad {
   position: absolute;
   margin-top: 12%;
-  margin-left: 50%; }
+  margin-left: 50%;
+}
+
+@-webkit-keyframes mars_planet_rotation {
+  from {
+    background-position: 0px 0;
+  }
+  to {
+    background-position: 950px 0;
+  }
+}
 
 @keyframes mars_planet_rotation {
   from {
-    background-position: 0px 0; }
+    background-position: 0px 0;
+  }
   to {
-    background-position: 950px 0; } }
+    background-position: 950px 0;
+  }
+}
+
+@-webkit-keyframes earth_planet_rotation {
+  from {
+    background-position: 1250px 0;
+  }
+  to {
+    background-position: 0px 0;
+  }
+}
+
 @keyframes earth_planet_rotation {
   from {
-    background-position: 1250px 0; }
+    background-position: 1250px 0;
+  }
   to {
-    background-position: 0px 0; } }
+    background-position: 0px 0;
+  }
+}
+
+@-webkit-keyframes venus_planet_rotation {
+  from {
+    background-position: 600px 0;
+  }
+  to {
+    background-position: 0px 0;
+  }
+}
+
 @keyframes venus_planet_rotation {
   from {
-    background-position: 600px 0; }
+    background-position: 600px 0;
+  }
   to {
-    background-position: 0px 0; } }
+    background-position: 0px 0;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   #sun img {
-    display: none; }
-
+    display: none;
+  }
   #mercury img {
-    display: none; }
-
+    display: none;
+  }
   #venus img {
-    display: none; }
-
+    display: none;
+  }
   #earth img {
-    display: none; }
-
+    display: none;
+  }
   #mars img {
-    display: none; }
-
+    display: none;
+  }
   #jupiter img {
-    display: none; }
-
+    display: none;
+  }
   #saturn img {
-    display: none; }
-
+    display: none;
+  }
   #uranus img {
-    display: none; }
-
+    display: none;
+  }
   #neptune img {
-    display: none; } }
-
+    display: none;
+  }
+}
 /*# sourceMappingURL=main.css.map */

@@ -16,7 +16,7 @@ else
 , interval ); //end of setInterval
 
 CheckDestination();
-// Move();
+Move();
 
 
 } //end of animateScript()
@@ -55,27 +55,55 @@ function CheckDestination(){
 } 
 
 function Move(){
-    const path = {
-        curviness: 0, 
-        values: [{x: 0, y:0}, {x: 0, y: -1000}]
-    }
+
+    document.addEventListener('keydown', function(event){
+        if (event.keyCode == 68){
+            document.getElementById("rocket_container").classList.add('moveleft');
+        }else if(event.keyCode == 65){
+            document.getElementById("rocket_container").classList.add('moveright');
+        }else if(event.keyCode == 87){
+            document.getElementById("rocket_container").classList.add('moveup');
+        }else if(event.keyCode == 83){
+            document.getElementById("rocket_container").classList.add('movedown');
+        }
+    }, false);
+
+    document.addEventListener('keyup', function(event){
+        if (event.keyCode == 68){
+            document.getElementById("rocket_container").classList.remove('moveleft');
+        }else if(event.keyCode == 65){
+            document.getElementById("rocket_container").classList.remove('moveright');
+        }else if(event.keyCode == 87){
+            document.getElementById("rocket_container").classList.remove('moveup');
+        }else if(event.keyCode == 83){
+            document.getElementById("rocket_container").classList.remove('movedown');
+        }
+    }, false);
+
+    // launch();
+
+
+    // const path = {
+    //     curviness: 0, 
+    //     values: [{x: 0, y:0}, {x: 0, y: -1000}]
+    // }
 
     // document.getElementById('rocket').style.backgroundPosition = "-250px  0px";
     // document.getElementById('rocket').style.animation = "thrust 2s steps(2) 2";  
 
-    const tween = new TimelineLite();
-    tween.add(
-        TweenLite.to("#rocket", 6, {
-        bezier: path
-        })
-    )
+//     const tween = new TimelineLite();
+//     tween.add(
+//         TweenLite.to("#rocket", 6, {
+//         bezier: path
+//         })
+//     )
 
-    const controller = new ScrollMagic.Controller();
+//     const controller = new ScrollMagic.Controller();
 
-    const flyScene = new ScrollMagic.Scene({
-        triggerElement: "#rocket_container",
-        triggerHook: 0,
-        duration: 3000
-    }).setTween(tween)
-    .setPin("#rocket_container").addTo(controller)
+//     const flyScene = new ScrollMagic.Scene({
+//         triggerElement: "#rocket_container",
+//         triggerHook: 0,
+//         duration: 3000
+//     }).setTween(tween)
+//     .setPin("#rocket_container").addTo(controller)
 }
