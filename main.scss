@@ -185,8 +185,8 @@ button {
 
 #mars {
     position: absolute;
-    height: 130px;
-    width: 130px;
+    height: 100px;
+    width: 100px;
     background: url('Mars.png') 0px 0px;   
     background-size: cover; 
     // animation: planet_rotation 1s steps(5) infinite;
@@ -205,8 +205,8 @@ button {
 
 #earth {
     position: absolute;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
     background: url('Images/Earth.png') 0px 0px;
     background-size: cover; 
     margin-top: 27%;
@@ -245,7 +245,7 @@ button {
 #mercury {
     position: absolute;
     margin-top: 27%;
-    margin-left: 56.5%;
+    margin-left: 60%;
     height: 40px;
     width: 40px;  
     background-image: url('Images/Mercury.png');
@@ -264,8 +264,8 @@ button {
 #venus {
     position: absolute;
     margin: 15% 30%;
-    height: 170px;
-    width: 170px;
+    height: 140px;
+    width: 140px;
     background: url('Images/Venus.png') 0px 0px;
     background-size: cover;
 
@@ -285,8 +285,8 @@ button {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 600px;
-    height: 500px;
+    width: 500px;
+    height: 400px;
     background-image: url('Images/Jupiter.png');
     background-size: contain;   
     background-repeat: no-repeat;
@@ -302,8 +302,8 @@ button {
     position: absolute;
     top: 0;
     left: 0;
-    width: 600px;
-    height: 750px;
+    width: 500px;
+    height: 650px;
     background-image: url('Images/Saturn.png');
     background-size: contain;   
     background-repeat: no-repeat;
@@ -319,8 +319,8 @@ button {
     position: absolute;
     bottom: 10%;
     left: 5%;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     background-image: url('Images/Neptune.png');
     background-size: contain;
     background-repeat: no-repeat;
@@ -336,8 +336,8 @@ button {
     position: absolute;
     top: 10%;
     right: 0;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     background-image: url('Images/Uranus.png');
     background-size: contain;   
     background-repeat: no-repeat;
