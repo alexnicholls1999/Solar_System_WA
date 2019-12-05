@@ -10,16 +10,28 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineLite.min.js" integrity="sha256-nuhNsfXzBFR6G1lKP8bK77dakkQDqdHcQ4OCFZvk6Qo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js" integrity="sha256-LBjlnpPrM6Aig8LDFc9PJctPHLGUc6RaUvnmXE4hV5Y=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/BezierPlugin.min.js" integrity="sha256-5jxCMRC1PYU02qJn+fj+DPuxcQZCh0DR8GRwi4iKoRc=" crossorigin="anonymous"></script>
-    <script src="launch.js"></script>
+    <!-- <script src="launch.js"></script> -->
+
+    <!-- animsition.css -->
+    <link rel="stylesheet" href="animsition.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- animsition.js -->
+    <script src="animsition.min.js"></script>
+
+    <script src="page.js"></script>
+
+
     <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+
+    <div class="animsition container">
         <div id="rocket" style="margin-top: 500px"></div>
-        <button onclick="launch();" id="launch">Launch</button>
-        <!-- <button onclick="landing()" id="land">Landing</button> -->
-    </div>
+        <a href="rocketlanding.html" class="animsition-link" data-animsition-in-class="fade-in-left" data-animsition-in-duration="1000"><button onclick="launch();" id="launch">Launch</button></a>
+            <!-- <button onclick="landing()" id="land">Landing</button> -->
+    </div>                
 
 </body>
 </html>

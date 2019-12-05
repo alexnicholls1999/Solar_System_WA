@@ -19,88 +19,95 @@
         
         <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
 
+        <script src="https://unpkg.com/@barba/core"></script>
         <script src="launch.js"></script>
         <link rel="stylesheet" href="main.css">
         <title>Document</title>
     </head>
 <body class="solar_system">
-        <div class="star">
-            <a href="loading.html?star=sun"><div id="sun"><img src="Images/Sun.png" alt="" srcset=""><p class="p">SUN</p></div></a>   
+
+    <div id="barba-wrapper">
+        <div class="barba-container">
+                <div class="star">
+                        <a href="loading.html?star=sun"><div id="sun"><img src="Images/Sun.png" alt="" srcset=""><p class="p">SUN</p></div></a>   
+                    </div>
+                
+                    <div class="planet">
+                        <a href="#"><div id="mercury"><p class="p">MERCURY</p></div></a>
+                    </div>
+                
+                    <div class="planet">
+                        <a href="loading.html?planet=venus"><div id="venus"><p class="p">VENUS</p></div></a>
+                    </div> 
+                
+                    <div class="planet">
+                        <a href="loading.html?planet=earth"><div id="earth"><p class="p">EARTH</p></div></a>
+                    </div>
+                
+                    <div class="planet">
+                        <a href="loading.html?planet=mars"><div id="mars"><p class="p">MARS</p></div></a>
+                    </div>
+                
+                    <div class="planet">
+                        <a href="loading.html?planet=jupiter"><div id="jupiter"><p class="p">JUPITER</p></div></a>
+                    </div>
+                
+                    <div class="planet">
+                        <a href="#"><div id="saturn"><p class="p">SATURN</p></div></a>
+                    </div>
+                
+                    <div class="planet">
+                        <a href="#"><div id="uranus"><p>URANUS</p></div></a>
+                    </div>
+                
+                    <div class="planet">
+                        <a href="#"><div id="neptune"><p>NEPTUNE</p></div></a>
+                    </div>
+            
+            
+                    <div class="solar_system_mobile">
+                        <div class="star_mb" id="sun_mb">
+                            <img src="Images/Sun.png" alt="">
+                            <p>SUN</p>
+                        </div>
+                        <div class="planet_mb" id="mercury_mb">
+                            <img src="Images/Mercury.png" alt="">
+                            <p>MERCURY</p>
+                        </div>
+                        <div class="planet_mb" id="venus_mb">
+                            <img src="Images/Venus.png" alt="">
+                            <p>VENUS</p>
+                        </div>
+                        <div class="planet_mb" id="earth_mb">
+                            <img src="Images/Earth.png" alt="">
+                            <p>EARTH</p>
+                        </div>
+                        <div class="planet_mb" id="mars_mb">
+                            <img src="Mars.png" alt="">
+                            <p>MARS</p>
+                        </div>
+                        <div class="planet_mb" id="jupiter_mb">
+                            <img src="Images/Jupiter_lg.png" alt="">
+                            <p>JUPITER</p>
+                        </div>
+                        <div class="planet_mb" id="saturn_mb">
+                            <img src="Images/Saturn.png" alt="">
+                            <p>SATURN</p>
+                        </div>
+                        <div class="planet_mb" id="uranus_mb">
+                            <img src="Images/Uranus.png" alt="">
+                            <p>URANUS</p>
+                        </div>
+                        <div class="planet_mb" id="neptune_mb">
+                            <img src="Images/Neptune.png" alt="" srcset="">
+                            <p>NEPTUNE</p>
+                        </div>
+                    </div>            
         </div>
-    
-        <div class="planet">
-            <a href="#"><div id="mercury"><p class="p">MERCURY</p></div></a>
-        </div>
-    
-        <div class="planet">
-            <a href="loading.html?planet=venus"><div id="venus"><p class="p">VENUS</p></div></a>
-        </div> 
-    
-        <div class="planet">
-            <a href="loading.html?planet=earth"><div id="earth"><p class="p">EARTH</p></div></a>
-        </div>
-    
-        <div class="planet">
-            <a href="loading.html?planet=mars"><div id="mars"><p class="p">MARS</p></div></a>
-        </div>
-    
-        <div class="planet">
-            <a href="loading.html?planet=jupiter"><div id="jupiter"><p class="p">JUPITER</p></div></a>
-        </div>
-    
-        <div class="planet">
-            <a href="#"><div id="saturn"><p class="p">SATURN</p></div></a>
-        </div>
-    
-        <div class="planet">
-            <a href="#"><div id="uranus"><p>URANUS</p></div></a>
-        </div>
-    
-        <div class="planet">
-            <a href="#"><div id="neptune"><p>NEPTUNE</p></div></a>
-        </div>
+    </div>
 
 
-        <div class="solar_system_mobile">
-            <div class="star_mb" id="sun_mb">
-                <img src="Images/Sun.png" alt="">
-                <p>SUN</p>
-            </div>
-            <div class="planet_mb" id="mercury_mb">
-                <img src="Images/Mercury.png" alt="">
-                <p>MERCURY</p>
-            </div>
-            <div class="planet_mb" id="venus_mb">
-                <img src="Images/Venus.png" alt="">
-                <p>VENUS</p>
-            </div>
-            <div class="planet_mb" id="earth_mb">
-                <img src="Images/Earth.png" alt="">
-                <p>EARTH</p>
-            </div>
-            <div class="planet_mb" id="mars_mb">
-                <img src="Mars.png" alt="">
-                <p>MARS</p>
-            </div>
-            <div class="planet_mb" id="jupiter_mb">
-                <img src="Images/Jupiter_lg.png" alt="">
-                <p>JUPITER</p>
-            </div>
-            <div class="planet_mb" id="saturn_mb">
-                <img src="Images/Saturn.png" alt="">
-                <p>SATURN</p>
-            </div>
-            <div class="planet_mb" id="uranus_mb">
-                <img src="Images/Uranus.png" alt="">
-                <p>URANUS</p>
-            </div>
-            <div class="planet_mb" id="neptune_mb">
-                <img src="Images/Neptune.png" alt="" srcset="">
-                <p>NEPTUNE</p>
-            </div>
 
-
-        </div>
 
 </body>
 </html>
