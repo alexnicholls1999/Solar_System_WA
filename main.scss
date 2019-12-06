@@ -199,9 +199,10 @@ button {
 
 }
 
-// #mars:hover {
-//     animation: mars_planet_rotation 1.25s steps(5) infinite;
-// }
+#mars:hover {
+    background: url('Images/mars.gif') 0px 0px;
+    background-size: cover;
+}
 
 #earth {
     position: absolute;
@@ -218,9 +219,11 @@ button {
     }
 }
 
-// #earth:hover {
-//     animation: earth_planet_rotation 1.25s steps(5) infinite; 
-// }
+#earth:hover {
+    background: url('Images/earth.gif') 0px 0px;
+    background-size: cover;
+}
+
 
 #sun {
     position: absolute;
@@ -277,9 +280,10 @@ button {
     }
 }
 
-// #venus:hover {
-//     animation: venus_planet_rotation 3s steps(4) infinite; 
-// }
+#venus:hover {
+    background: url('Images/venus.gif') 0px 0px;
+    background-size: cover;
+}
 
 #jupiter {
     position: absolute;
